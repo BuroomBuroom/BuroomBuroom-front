@@ -6,7 +6,7 @@ import * as S from "./Header.style";
 export const Header = () => {
   return (
     <HeaderLayout>
-      <S.Logo src="assets/BRBR.png" />
+      <S.Logo src="/assets/BRBR.png" />
       <S.Navigation>
         <NavLink to="/">홈</NavLink>
         <NavLink to="/booking">예약하기</NavLink>
