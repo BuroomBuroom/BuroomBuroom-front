@@ -1,0 +1,39 @@
+export const colors = {
+  BSM_RED: "#DE353A",
+  BSM_BLUE: "#285FBF",
+  BSM_GREEN: "#4FACA5",
+  BSM_YELLOW: "#EEA045",
+
+  RED_5: "#EB6569",
+  RED_4: "#F49497",
+  RED_3: "#FDB8BA",
+  RED_2: "#FFD4D6",
+  RED_1: "#FFECEC",
+
+  BLUE_5: "#5282D7",
+  BLUE_4: "#80A5E5",
+  BLUE_3: "#A6C0ED",
+  BLUE_2: "#CFDEF9",
+  BLUE_1: "#EAF1FF",
+
+  YELLOW_5: "#FFB764",
+  YELLOW_4: "#FFC684",
+  YELLOW_3: "#FFD39F",
+  YELLOW_2: "#FFEAD2",
+  YELLOW_1: "#FFF6EB",
+
+  GREEN_5: "#70BFB9",
+  GREEN_4: "#97D6D1",
+  GREEN_3: "#B0E0DD",
+  GREEN_2: "#CCECEA",
+  GREEN_1: "#E5F9F7",
+
+  BLACK_8: "#404040",
+  BLACK_7: "#797979",
+  BLACK_6: "#828282",
+  BLACK_5: "#8E8E8F",
+  BLACK_4: "#BEBEBE",
+  BLACK_3: "#D9D9D9",
+  BLACK_2: "#E9E9EA",
+  BLACK_1: "#F5F5F5",
+};
