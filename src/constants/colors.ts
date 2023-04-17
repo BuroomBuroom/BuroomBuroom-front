@@ -36,4 +36,5 @@ export const colors = {
   BLACK_3: "#D9D9D9",
   BLACK_2: "#E9E9EA",
   BLACK_1: "#F5F5F5",
+  BLACK_0: "#FBFBFB",
 };
