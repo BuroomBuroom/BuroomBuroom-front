@@ -1,25 +1,15 @@
 import React, { useEffect } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { getAuthToken, getBSMAuthToken } from "../../apis/auth";
-import { useMutation } from "react-query";
-import { useSetRecoilState } from "recoil";
-import { authState } from "../../atoms/auth/auth.atom";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { getBSMAuthToken } from "../../apis/auth";
 import { Loading } from "../../components/shared/loading/Loading";
+import { AuthFeature } from "../../features/auth/auth.feature";
 
 export const Redirect = () => {
   const [searchParams] = useSearchParams(useLocation().search);
-  const setUser = useSetRecoilState(authState);
-  const navigate = useNavigate();
-
-  const { mutate } = useMutation(getAuthToken, {
-    onSuccess(data) {
-      setUser(data.user_token);
-      navigate("/");
-    },
-  });
+  const { login } = AuthFeature();
 
   useEffect(() => {
-    getBSMAuthToken(searchParams.get("code") as string).then((res) => mutate(res.data.token));
+    getBSMAuthToken(searchParams.get("code") as string).then((res) => login.mutate(res.data.token));
   }, []);
 
   return <Loading />;
