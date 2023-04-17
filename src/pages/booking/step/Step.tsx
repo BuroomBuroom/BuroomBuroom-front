@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { stepItem } from "../../../constants/stepItem";
 import * as S from "./Step.style";
 

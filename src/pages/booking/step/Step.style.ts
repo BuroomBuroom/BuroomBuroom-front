@@ -5,6 +5,7 @@ export const StepBox = styled.aside`
   display: flex;
   flex-direction: column;
   width: 14%;
+  height: 80%;
   row-gap: 3%;
 `;
 
