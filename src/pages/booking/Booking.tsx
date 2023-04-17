@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./Booking.style";
 import { Title } from "../../components/shared/common/title/Title";
 import { Step } from "./step/Step";
-import { useRecoilState } from "recoil";
-import { bookingStep } from "../../atoms/booking";
+import { Content } from "./content/Content";
+import { Button } from "../../components/shared/common/button/Button";
 
 export const Booking = () => {
-  const [step, setStep] = useRecoilState(bookingStep);
+  const [step, setStep] = useState<number>(1);
 
   return (
     <>
       <Title title="예약하기" />
-      <S.BookingLayout>
-        <Step step={step} />
-        <div>
-          <button onClick={() => setStep((prev) => prev + 1)}>plus</button>
-        </div>
-      </S.BookingLayout>
+      <S.Article>
+        <S.BookingLayout>
+          <Step step={step} />
+          <S.Section>
+            <Content step={step} />
+          </S.Section>
+        </S.BookingLayout>
+        <Button onClick={() => setStep((prev) => prev + 1)} children={step === 1 ? "예약 시작하기" : "다음으로"} />
+      </S.Article>
     </>
   );
 };
