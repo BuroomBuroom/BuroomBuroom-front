@@ -11,8 +11,3 @@ export const LoadingBG = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const LoadingIFrame = styled.iframe`
-  width: 40%;
-  border: none;
-`;
