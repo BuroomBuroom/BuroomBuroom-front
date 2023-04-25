@@ -1,0 +1,9 @@
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    margin-left: 100%;
+  }
+  to {
+    opacity: 1;
+  }
+}
