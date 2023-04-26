@@ -49,8 +49,9 @@ export const CheckBox = styled.div<{ checked: boolean }>`
   height: 30px;
   text-align: center;
   position: absolute;
-  border: 1px solid ${colors.BSM_GREEN};
-  background: rgba(79, 172, 165, 0.2);
+  border: 3px solid ${colors.BSM_GREEN};
   border-radius: 30px;
   margin: 10px;
+
+  background: ${(props) => (props.checked ? "rgba(79, 172, 165, 0.2)" : colors.BSM_GREEN)};
 `;

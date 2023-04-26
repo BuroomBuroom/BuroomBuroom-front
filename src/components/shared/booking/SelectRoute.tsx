@@ -34,7 +34,7 @@ export const SelectRoute = (props: Props) => {
       </div>
       <Button
         onClick={() => props.goNext({ bookingName: "routeNo", content: selected })}
-        children="예약하러 가기"
+        children={`${selected}호차 선택하기`}
       />
     </>
   );

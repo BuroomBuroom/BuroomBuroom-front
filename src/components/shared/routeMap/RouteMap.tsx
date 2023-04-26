@@ -51,7 +51,13 @@ export const RouteMap = ({ idx, setSelect, select }: PropsType) => {
 
   return (
     <S.Map>
-      <S.CheckBox onClick={() => setSelect(idx + 1)} checked={idx + 1 === select} />
+      <S.CheckBox
+        onClick={() => {
+          setSelect(idx + 1);
+        }}
+        checked={idx + 1 !== select}>
+        {idx + 1 === select && <img src="/assets/check.svg" />}
+      </S.CheckBox>
       <div
         id={`map${idx}`}
         style={{
