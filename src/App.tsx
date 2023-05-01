@@ -9,6 +9,7 @@ import { Mypage } from "./pages/mypage/Mypage";
 import { Timetable } from "./pages/timetable/Timetable";
 import { Redirect } from "./pages/auth/Redirect";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Footer } from "./components/shared/footer/Footer";
 
 function App() {
   const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ function App() {
               <Route path="/mypage" element={<Mypage />} />
             </Routes>
           </Layout>
+          <Footer />
         </BrowserRouter>
       </RecoilRoot>
     </QueryClientProvider>
