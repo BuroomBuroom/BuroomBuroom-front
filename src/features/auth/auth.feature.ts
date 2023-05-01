@@ -10,6 +10,8 @@ export const AuthFeature = () => {
   const navigate = useNavigate();
   const login = useMutation(getAuthToken, {
     onSuccess(data) {
+      console.log(data);
+
       setUser(data.user_token);
       navigate("/");
     },
