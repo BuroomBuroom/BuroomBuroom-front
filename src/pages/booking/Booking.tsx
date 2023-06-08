@@ -6,6 +6,7 @@ import { Start } from "../../components/shared/booking/Start";
 import { BookingLayout } from "../../components/layouts/BookingLayout";
 import { SelectRoute } from "../../components/shared/booking/SelectRoute";
 import { SelectSeat } from "../../components/shared/booking/SelectSeat";
+import { Confirm } from "../../components/shared/booking/Confirm";
 
 export const Booking = () => {
   const { step, goNext } = useBooking();
@@ -29,6 +30,7 @@ export const Booking = () => {
         {step === 1 && <Start goNext={goNext} />}
         {step === 2 && <SelectRoute goNext={goNext} />}
         {step === 3 && <SelectSeat goNext={goNext} />}
+        {step === 4 && <Confirm goNext={goNext} />}
       </BookingLayout>
     </>
   );
