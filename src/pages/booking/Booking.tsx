@@ -9,7 +9,7 @@ import { SelectSeat } from "../../components/shared/booking/SelectSeat";
 import { Confirm } from "../../components/shared/booking/Confirm";
 
 export const Booking = () => {
-  const { step, goNext } = useBooking();
+  const { step, goNext, booking } = useBooking();
 
   const preventClose = (e: BeforeUnloadEvent) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ export const Booking = () => {
         {step === 1 && <Start goNext={goNext} />}
         {step === 2 && <SelectRoute goNext={goNext} />}
         {step === 3 && <SelectSeat goNext={goNext} />}
-        {step === 4 && <Confirm goNext={goNext} />}
+        {step === 4 && <Confirm booking={booking} />}
       </BookingLayout>
     </>
   );

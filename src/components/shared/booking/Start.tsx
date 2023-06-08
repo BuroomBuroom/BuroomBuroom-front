@@ -19,7 +19,7 @@ export const Start = (props: Props) => {
         <DateContent>하교용 셔틀버스</DateContent>
       </Date>
       <Button
-        onClick={() => props.goNext({ bookingName: "", content: "" })}
+        onClick={() => props.goNext({ bookingName: "date", content: nextFriday })}
         children="예약하러 가기"
       />
     </>
