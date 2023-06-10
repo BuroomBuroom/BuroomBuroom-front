@@ -16,7 +16,7 @@ export const Header = () => {
         <NavLink to="/booking">예약하기</NavLink>
         <NavLink to="/timetable">버스 시간표</NavLink>
         {user.token !== "" ? (
-          <button>{user.studentName}</button>
+          <NavLink to="/mypage">{user.studentName}</NavLink>
         ) : (
           <NavLink to={url}>로그인</NavLink>
         )}
