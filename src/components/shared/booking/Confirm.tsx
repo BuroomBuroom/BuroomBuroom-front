@@ -11,7 +11,7 @@ type PropType = {
 
 export const Confirm = (props: PropType) => {
   const { reserve } = BookingFeature();
-  const auth = AuthFeature();
+  const { user } = AuthFeature();
 
   return (
     <>
@@ -26,7 +26,7 @@ export const Confirm = (props: PropType) => {
         <span>{props.booking.seatName}호석</span>
       </ConfirmStyle>
       <Button
-        onClick={() => reserve.mutate({ booking: props.booking, token: auth.user.userToken })}
+        onClick={() => reserve.mutate({ booking: props.booking, token: user.token })}
         children="예약 확정하기"
       />
     </>
