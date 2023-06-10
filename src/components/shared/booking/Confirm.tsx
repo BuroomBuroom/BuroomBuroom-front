@@ -17,7 +17,7 @@ export const Confirm = (props: PropType) => {
     <>
       <ConfirmStyle>
         <span>
-          {props.booking.date.getFullYear()}/{props.booking.date.getMonth()}/
+          {props.booking.date.getFullYear()}/{props.booking.date.getMonth() + 1}/
           {props.booking.date.getDate()}
         </span>
         <span>|</span>
