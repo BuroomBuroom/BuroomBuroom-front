@@ -10,7 +10,7 @@ const { persistAtom } = recoilPersist({
 export const authState = atom<AuthType>({
   key: "authState",
   default: {
-    userToken: "",
+    token: "",
     classNo: "",
     grade: "",
     studentName: "",

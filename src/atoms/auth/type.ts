@@ -1,5 +1,5 @@
 export type AuthType = {
-  userToken: string;
+  token: string;
   classNo: string;
   grade: string;
   studentName: string;
